@@ -1,6 +1,6 @@
-import Liberary_App.Book;
-import Liberary_App.Category;
-import Liberary_App.Library;
+import Library_App.Book;
+import Library_App.Category;
+import Library_App.Library;
 
 import java.util.Scanner;
 
