@@ -1,6 +1,6 @@
-import Library_App.Book;
-import Library_App.Category;
-import Library_App.Library;
+import libraryApp.Book;
+import libraryApp.Category;
+import libraryApp.Library;
 
 import java.util.Scanner;
 
