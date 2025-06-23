@@ -2,8 +2,6 @@ package libraryApp;
 
 public class Book  {
 
-
-
     int id;
     String title;
     String author;
@@ -11,12 +9,10 @@ public class Book  {
     boolean isReturned;
     Category category;
 
-    public Book(int id, String title, String author, boolean isBorrowed, boolean isReturned, Category category) {
+    public Book(int id, String title, String author, Category category) {
         this.id = id;
         this.title = title;
         this.author = author;
-        this.isBorrowed = isBorrowed;
-        this.isReturned = isReturned;
         this.category = category;
     }
 
