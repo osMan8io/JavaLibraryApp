@@ -1,6 +1,7 @@
 import libraryApp.Book;
 import libraryApp.Category;
 import libraryApp.Library;
+import libraryApp.LibraryUI;
 
 import java.util.Scanner;
 
@@ -9,6 +10,8 @@ public class Main   {
     public static void main(String[] args) {
 
         Library library = new Library();
+        LibraryUI ui = new LibraryUI(library);
+
         Book book1 = new Book(1,"Sicher","Heuber",false,false,Category.EDUCATION);
         Book book2 = new Book(2,"spider-man","Marvell",false,false,Category.COMIC);
         Book book3 = new Book(3,"Romeo & Juliet","Youth",false,false,Category.ROMAN);
@@ -25,11 +28,13 @@ public class Main   {
         library.books.add(book6);
         library.books.add(book7);
 
+        ui.start();
+
 /*        for (int i = 0; i < library.books.size(); i++) {
             System.out.println("DEBUG: ID = " + library.books.get(i).getTitle() + " " + library.books.indexOf(library.books.get(i)));
         }*/
 
-        System.out.println("Welcome to Library");
+/*        System.out.println("Welcome to Library");
         System.out.println("""
                 What would you like to do?
                 1. Add Book
@@ -53,7 +58,7 @@ public class Main   {
             System.out.println("please enter the author");
             String author = scan.nextLine();
             System.out.println("please enter the category: ROMAN, FICTION, COMIC, EDUCATION");
-            Category category = Category.valueOf(scan.nextLine());
+            Category category = Category.valueOf(scan.nextLine().trim().toUpperCase());
 
             Book book = new Book(bookId,title,author,false,false,category);
             library.addBook(book);
@@ -117,7 +122,7 @@ public class Main   {
                 }
 
             }
-        }
+        }*/
 
     }
 }
