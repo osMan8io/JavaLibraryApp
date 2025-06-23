@@ -14,14 +14,14 @@ public class LibraryUI {
     public void start() {
 
         System.out.println("Welcome to the Library Application");
+        showMenu();
+        System.out.println("Please select an option from the menu or enter 'Q' to exit the application");
+        String choice = scan.nextLine();
 
-        while (true) {
-            System.out.println("Please enter your choice from the menu or enter 'Q' to exit the application");
-            showMenu();
-            String choice = scan.nextLine();
+        while (!choice.isEmpty()) {
             if (choice.equalsIgnoreCase("q")) {
                 System.out.println("Goodbye!");
-                break;
+                return;
             }
             if (choice.equalsIgnoreCase("1")) {
                 handelAddBook();
@@ -30,20 +30,20 @@ public class LibraryUI {
                 while (!choice.isEmpty()) {
                     if (choice.equalsIgnoreCase("y")) {
                         handelAddBook();
-                        break;
+                        return;
                     } else if (choice.equalsIgnoreCase("n")) {
                         System.out.println("Goodbye!");
-                        break;
+                        return;
                     } else {
                         System.err.println("Invalid choice please enter 'Y' for yes or 'N' for no");
                         choice = scan.nextLine();
                         if (choice.equalsIgnoreCase("y")) {
                             handelAddBook();
-                            break;
+                            return;
                         }
                         if (choice.equalsIgnoreCase("n")) {
                             System.out.println("Goodbye!");
-                            break;
+                            return;
                         }
                     }
                 }
@@ -55,19 +55,19 @@ public class LibraryUI {
                 while (!choice.isEmpty()) {
                     if (choice.equalsIgnoreCase("y")) {
                         handelDeleteBook();
-                        break;
+                        return;
                     } else if (choice.equalsIgnoreCase("n")) {
                         System.out.println("Goodbye!");
-                        break;
+                        return;
                     } else {
                         System.err.println("Invalid choice please enter 'Y' or 'N' for no");
                         choice = scan.nextLine();
                         if (choice.equalsIgnoreCase("y")) {
                             handelDeleteBook();
-                            break;
+                            return;
                         } if (choice.equalsIgnoreCase("n")) {
                             System.out.println("Goodbye!");
-                            break;
+                            return;
                         }
                     }
                 }
@@ -79,19 +79,19 @@ public class LibraryUI {
                 while (!choice.isEmpty()) {
                     if (choice.equalsIgnoreCase("y")) {
                         handelBorrowBook();
-                        break;
+                        return;
                     } else if (choice.equalsIgnoreCase("n")) {
                         System.out.println("Goodbye!");
-                        break;
+                        return;
                     } else {
                         System.err.println("Invalid choice please enter 'Y' or 'N' for no");
                         choice = scan.nextLine();
                         if (choice.equalsIgnoreCase("y")) {
                             handelBorrowBook();
-                            break;
+                            return;
                         } else if (choice.equalsIgnoreCase("n")) {
                             System.out.println("Goodbye!");
-                            break;
+                            return;
                         }
                     }
                 }
@@ -103,19 +103,19 @@ public class LibraryUI {
                 while (!choice.isEmpty()) {
                     if (choice.equalsIgnoreCase("y")) {
                         handelReturnBook();
-                        break;
+                        return;
                     } else if (choice.equalsIgnoreCase("n")) {
                         System.out.println("Goodbye!");
-                        break;
+                        return;
                     } else {
                         System.err.println("Invalid choice please enter 'Y' or 'N' for no");
                         choice = scan.nextLine();
                         if (choice.equalsIgnoreCase("y")) {
                             handelReturnBook();
-                            break;
+                            return;
                         } else if (choice.equalsIgnoreCase("n")) {
                             System.out.println("Goodbye!");
-                            break;
+                            return;
                         }
                     }
                 }
@@ -127,19 +127,19 @@ public class LibraryUI {
                 while (!choice.isEmpty()) {
                     if (choice.equalsIgnoreCase("y")) {
                         handelSearchBookByTitle();
-                        break;
+                        return;
                     } else if (choice.equalsIgnoreCase("n")) {
                         System.out.println("Goodbye!");
-                        break;
+                        return;
                     } else {
                         System.err.println("Invalid choice please enter 'Y' or 'N' for no");
                         choice = scan.nextLine();
                         if (choice.equalsIgnoreCase("y")) {
                             handelSearchBookByTitle();
-                            break;
+                            return;
                         } else if (choice.equalsIgnoreCase("n")) {
                             System.out.println("Goodbye!");
-                            break;
+                            return;
                         }
                     }
                 }
@@ -151,19 +151,19 @@ public class LibraryUI {
                 while (!choice.isEmpty()) {
                     if (choice.equalsIgnoreCase("y")) {
                         handelSearchBookByAuthor();
-                        break;
+                        return;
                     } else if (choice.equalsIgnoreCase("n")) {
                         System.out.println("Goodbye!");
-                        break;
+                        return;
                     } else {
                         System.err.println("Invalid choice please enter 'Y' or 'N' for no");
                         choice = scan.nextLine();
                         if (choice.equalsIgnoreCase("y")) {
                             handelSearchBookByAuthor();
-                            break;
+                            return;
                         } else if (choice.equalsIgnoreCase("n")) {
                             System.out.println("Goodbye!");
-                            break;
+                            return;
                         }
                     }
                 }
@@ -175,19 +175,19 @@ public class LibraryUI {
                 while (!choice.isEmpty()) {
                     if (choice.equalsIgnoreCase("y")) {
                         handelSearchBookById();
-                        break;
+                        return;
                     } else if (choice.equalsIgnoreCase("n")) {
                         System.out.println("Goodbye!");
-                        break;
+                        return;
                     } else {
                         System.err.println("Invalid choice please enter 'Y' or 'N' for no");
                         choice = scan.nextLine();
                         if (choice.equalsIgnoreCase("y")) {
                             handelSearchBookById();
-                            break;
+                            return;
                         } else if (choice.equalsIgnoreCase("n")) {
                             System.out.println("Goodbye!");
-                            break;
+                            return;
                         }
                     }
                 }
@@ -199,221 +199,25 @@ public class LibraryUI {
                 while (!choice.isEmpty()) {
                     if (choice.equalsIgnoreCase("y")) {
                         handelSearchBookByCategory();
-                        break;
+                        return;
                     } else if (choice.equalsIgnoreCase("n")) {
                         System.out.println("Goodbye!");
-                        break;
+                        return;
                     } else {
                         System.err.println("Invalid choice please enter 'Y' or 'N' for no");
                         choice = scan.nextLine();
                         if (choice.equalsIgnoreCase("y")) {
                             handelSearchBookByCategory();
-                            break;
+                            return;
                         } else if (choice.equalsIgnoreCase("n")) {
                             System.out.println("Goodbye!");
-                            break;
+                            return;
                         }
                     }
                 }
             }
-            else {
-                System.err.println("Invalid choice please enter a valid number form menu");
-                choice = scan.nextLine();
-                if (choice.equalsIgnoreCase("1")) {
-                    handelAddBook();
-                    System.out.println("would you like to add another book? (Y/N)");
-                    choice = scan.nextLine();
-                    while (!choice.isEmpty()) {
-                        if (choice.equalsIgnoreCase("y")) {
-                            handelAddBook();
-                            break;
-                        } else if (choice.equalsIgnoreCase("n")) {
-                            System.out.println("Goodbye!");
-                            break;
-                        } else {
-                            System.err.println("Invalid choice please enter 'Y' for yes or 'N' for no");
-                            choice = scan.nextLine();
-                            if (choice.equalsIgnoreCase("y")) {
-                                handelAddBook();
-                                break;
-                            }
-                            if (choice.equalsIgnoreCase("n")) {
-                                System.out.println("Goodbye!");
-                                break;
-                            }
-                        }
-                    }
-                }
-                if (choice.equalsIgnoreCase("2")) {
-                    handelDeleteBook();
-                    System.out.println("would you like to delete another book? (Y/N)");
-                    choice = scan.nextLine();
-                    while (!choice.isEmpty()) {
-                        if (choice.equalsIgnoreCase("y")) {
-                            handelDeleteBook();
-                            break;
-                        } else if (choice.equalsIgnoreCase("n")) {
-                            System.out.println("Goodbye!");
-                            break;
-                        } else {
-                            System.err.println("Invalid choice please enter 'Y' or 'N' for no");
-                            choice = scan.nextLine();
-                            if (choice.equalsIgnoreCase("y")) {
-                                handelDeleteBook();
-                                break;
-                            } if (choice.equalsIgnoreCase("n")) {
-                                System.out.println("Goodbye!");
-                                break;
-                            }
-                        }
-                    }
-                }
-                if (choice.equalsIgnoreCase("3")) {
-                    handelBorrowBook();
-                    System.out.println("would you like to borrow another book? (Y/N)");
-                    choice = scan.nextLine();
-                    while (!choice.isEmpty()) {
-                        if (choice.equalsIgnoreCase("y")) {
-                            handelBorrowBook();
-                            break;
-                        } else if (choice.equalsIgnoreCase("n")) {
-                            System.out.println("Goodbye!");
-                            break;
-                        } else {
-                            System.err.println("Invalid choice please enter 'Y' or 'N' for no");
-                            choice = scan.nextLine();
-                            if (choice.equalsIgnoreCase("y")) {
-                                handelBorrowBook();
-                                break;
-                            } else if (choice.equalsIgnoreCase("n")) {
-                                System.out.println("Goodbye!");
-                                break;
-                            }
-                        }
-                    }
-                }
-                if (choice.equalsIgnoreCase("4")) {
-                    handelReturnBook();
-                    System.out.println("would you like to return another book? (Y/N)");
-                    choice = scan.nextLine();
-                    while (!choice.isEmpty()) {
-                        if (choice.equalsIgnoreCase("y")) {
-                            handelReturnBook();
-                            break;
-                        } else if (choice.equalsIgnoreCase("n")) {
-                            System.out.println("Goodbye!");
-                            break;
-                        } else {
-                            System.err.println("Invalid choice please enter 'Y' or 'N' for no");
-                            choice = scan.nextLine();
-                            if (choice.equalsIgnoreCase("y")) {
-                                handelReturnBook();
-                                break;
-                            } else if (choice.equalsIgnoreCase("n")) {
-                                System.out.println("Goodbye!");
-                                break;
-                            }
-                        }
-                    }
-                }
-                if (choice.equalsIgnoreCase("5")) {
-                    handelSearchBookByTitle();
-                    System.out.println("would you like to search another book (Y/N)");
-                    choice = scan.nextLine();
-                    while (!choice.isEmpty()) {
-                        if (choice.equalsIgnoreCase("y")) {
-                            handelSearchBookByTitle();
-                            break;
-                        } else if (choice.equalsIgnoreCase("n")) {
-                            System.out.println("Goodbye!");
-                            break;
-                        } else {
-                            System.err.println("Invalid choice please enter 'Y' or 'N' for no");
-                            choice = scan.nextLine();
-                            if (choice.equalsIgnoreCase("y")) {
-                                handelSearchBookByTitle();
-                                break;
-                            } else if (choice.equalsIgnoreCase("n")) {
-                                System.out.println("Goodbye!");
-                                break;
-                            }
-                        }
-                    }
-                }
-                if (choice.equalsIgnoreCase("6")) {
-                    handelSearchBookByAuthor();
-                    System.out.println("would you like to search another book (Y/N)");
-                    choice = scan.nextLine();
-                    while (!choice.isEmpty()) {
-                        if (choice.equalsIgnoreCase("y")) {
-                            handelSearchBookByAuthor();
-                            break;
-                        } else if (choice.equalsIgnoreCase("n")) {
-                            System.out.println("Goodbye!");
-                            break;
-                        } else {
-                            System.err.println("Invalid choice please enter 'Y' or 'N' for no");
-                            choice = scan.nextLine();
-                            if (choice.equalsIgnoreCase("y")) {
-                                handelSearchBookByAuthor();
-                                break;
-                            } else if (choice.equalsIgnoreCase("n")) {
-                                System.out.println("Goodbye!");
-                                break;
-                            }
-                        }
-                    }
-                }
-                if (choice.equalsIgnoreCase("7")) {
-                    handelSearchBookById();
-                    System.out.println("would you like to search another book (Y/N)");
-                    choice = scan.nextLine();
-                    while (!choice.isEmpty()) {
-                        if (choice.equalsIgnoreCase("y")) {
-                            handelSearchBookById();
-                            break;
-                        } else if (choice.equalsIgnoreCase("n")) {
-                            System.out.println("Goodbye!");
-                            break;
-                        } else {
-                            System.err.println("Invalid choice please enter 'Y' or 'N' for no");
-                            choice = scan.nextLine();
-                            if (choice.equalsIgnoreCase("y")) {
-                                handelSearchBookById();
-                                break;
-                            } else if (choice.equalsIgnoreCase("n")) {
-                                System.out.println("Goodbye!");
-                                break;
-                            }
-                        }
-                    }
-                }
-                if (choice.equalsIgnoreCase("8")) {
-                    handelSearchBookByCategory();
-                    System.out.println("would you like to search another book (Y/N)");
-                    choice = scan.nextLine();
-                    while (!choice.isEmpty()) {
-                        if (choice.equalsIgnoreCase("y")) {
-                            handelSearchBookByCategory();
-                            break;
-                        } else if (choice.equalsIgnoreCase("n")) {
-                            System.out.println("Goodbye!");
-                            break;
-                        } else {
-                            System.err.println("Invalid choice please enter 'Y' or 'N' for no");
-                            choice = scan.nextLine();
-                            if (choice.equalsIgnoreCase("y")) {
-                                handelSearchBookByCategory();
-                                break;
-                            } else if (choice.equalsIgnoreCase("n")) {
-                                System.out.println("Goodbye!");
-                                break;
-                            }
-                        }
-                    }
-                }
-                break;
-            }
+            System.err.println("Invalid choice please enter a valid option");
+            break;
         }
 
     }
@@ -475,7 +279,7 @@ public class LibraryUI {
         String author = getNonEmptyString("Enter author: ");
         Category inputCategory = getValidCategory("Please enter a category (ROMAN, FICTION, COMIC, EDUCATION): ");
 
-        library.addBook(new Book(id,title,author,false,true,Category.valueOf(String.valueOf(inputCategory))));
+        library.addBook(new Book(id,title,author,Category.valueOf(String.valueOf(inputCategory))));
     }
 
     private void handelDeleteBook() {

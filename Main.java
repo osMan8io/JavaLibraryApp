@@ -12,13 +12,13 @@ public class Main   {
         Library library = new Library();
         LibraryUI ui = new LibraryUI(library);
 
-        Book book1 = new Book(1,"Sicher","Heuber",false,false,Category.EDUCATION);
-        Book book2 = new Book(2,"spider-man","Marvell",false,false,Category.COMIC);
-        Book book3 = new Book(3,"Romeo & Juliet","Youth",false,false,Category.ROMAN);
-        Book book4 = new Book(4,"The Duned City","Okya",false,false,Category.ROMAN);
-        Book book5 = new Book(5,"ABC English","Oxford",false,false,Category.EDUCATION);
-        Book book6 = new Book(99,"Spring Boot","Spring",false,false,Category.EDUCATION);
-        Book book7 = new Book(0,"Gone","Hunter",false,false,Category.FICTION);
+        Book book1 = new Book(1,"Sicher","Heuber",Category.EDUCATION);
+        Book book2 = new Book(2,"spider-man","Marvell",Category.COMIC);
+        Book book3 = new Book(3,"Romeo & Juliet","Youth",Category.ROMAN);
+        Book book4 = new Book(4,"The Duned City","Okya",Category.ROMAN);
+        Book book5 = new Book(5,"ABC English","Oxford",Category.EDUCATION);
+        Book book6 = new Book(99,"Spring Boot","Spring",Category.EDUCATION);
+        Book book7 = new Book(0,"Gone","Hunter",Category.FICTION);
 
         library.books.add(book1);
         library.books.add(book2);
